@@ -17,9 +17,13 @@ fi
 # Remove unnecessary files
 rm $osus/readme.md
 rm $osus/osu-i
+rm $osus/scripts
 
 echo "export PATH=$PATH:$osus" >> ~/.bashrc # Add osu-stuff directory as $PATH variable
 
 echo "osu-stuff was cloned in $osus"
 source ~/.bashrc # Source ~/.bashrc, so you can use these commands immediately
 
+echo "Please, wait 3 seconds."
+sleep 3 # This sleep timer is here, because while waiting you can read where osu-stuff was saved.
+curl https://raw.githubusercontent.com/yurisuki/osu-stuff/master/scripts | bash # This one will show what osu-stuff includes inside
